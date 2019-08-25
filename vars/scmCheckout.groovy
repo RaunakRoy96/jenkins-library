@@ -1,7 +1,7 @@
 class CheckoutProperties {
 	static String scmClass = 'GitSCM';
-	String branchName = '*/master';
-	String scmUrl = 'https://github.com/RaunakRoy96/journaldev-springboot.git';
+	static String branchName = '*/master';
+	static String scmUrl = 'https://github.com/RaunakRoy96/journaldev-springboot.git';
 }
 
 def call(script) {
