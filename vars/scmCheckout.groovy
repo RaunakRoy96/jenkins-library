@@ -1,5 +1,5 @@
 class CheckoutProperties {
-	String scmClass = 'GitSCM';
+	static String scmClass = 'GitSCM';
 	String branchName = '*/master';
 	String scmUrl = 'https://github.com/RaunakRoy96/journaldev-springboot.git';
 }
@@ -7,7 +7,7 @@ class CheckoutProperties {
 def call(script) {
 	script.checkout(
         [
-            $class: this.CheckoutProperties.scmClass, 
+            $class: CheckoutProperties.scmClass, 
             branches: [[name: CheckoutProperties.branchName]], 
             doGenerateSubmoduleConfigurations: false, 
             extensions: [], 
