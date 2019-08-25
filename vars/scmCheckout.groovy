@@ -7,12 +7,12 @@ class CheckoutProperties {
 def call(script) {
 	script.checkout(
         [
-            $class: ${CheckoutProperties.scmClass}, 
-            branches: [[name: ${CheckoutProperties.branchName}]], 
+            $class: CheckoutProperties.scmClass, 
+            branches: [[name: CheckoutProperties.branchName]], 
             doGenerateSubmoduleConfigurations: false, 
             extensions: [], 
             submoduleCfg: [], 
-            userRemoteConfigs: [[url: ${CheckoutProperties.scmUrl}]]
+            userRemoteConfigs: [[url: CheckoutProperties.scmUrl]]
         ]
     )
 }
