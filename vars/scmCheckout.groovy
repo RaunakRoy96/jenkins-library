@@ -7,7 +7,7 @@ class CheckoutProperties {
 def call(script) {
 	script.checkout(
         [
-            $class: CheckoutProperties.scmClass, 
+            $class: this.CheckoutProperties.scmClass, 
             branches: [[name: CheckoutProperties.branchName]], 
             doGenerateSubmoduleConfigurations: false, 
             extensions: [], 
