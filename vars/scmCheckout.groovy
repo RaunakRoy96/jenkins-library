@@ -14,4 +14,5 @@ def call(script) {
             submoduleCfg: [], 
             userRemoteConfigs: [[url: ${CheckoutProperties.scmUrl}]]
         ]
+    )
 }
