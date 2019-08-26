@@ -1,4 +1,4 @@
-def mavenGoal = 'mvn clean install'
+mavenGoal = 'mvn clean install'
 
 def call(script, jdkVar, mavenVar) {
     script.withMaven (
