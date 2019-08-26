@@ -4,6 +4,6 @@ def call(script, jdkVar, mavenVar) {
     script.withMaven (
         maven: mavenVar,
         jdk: jdkVar) {
-                sh this.mavenGoal ;
+                sh '${this.mavenGoal}'
     }
 }
