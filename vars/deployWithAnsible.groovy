@@ -3,6 +3,6 @@ def call(script, host) {
         //sh "ansible-playbook DeployDocker.yml  -vvvv --extra-vars 'HOST=${host} USERNAME=${env.dockerUsername} PASSWORD=${env.dockerPassword}'"
         def user = "devopsinfra"
         def pass = "Applestore12\$6"
-        sht "ansible -m ping all-e 'ansible_user=${user} ansible_ssh_pass=${pass} ansible_sudo_pass=${pass}'"
+        sh "ansible -m ping all-e 'ansible_user=${user} ansible_ssh_pass=${pass} ansible_sudo_pass=${pass}'"
     }
 }
