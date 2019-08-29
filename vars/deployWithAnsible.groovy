@@ -1,5 +1,6 @@
 def call(script, host) {
     script.withCredentials([usernamePassword(credentialsId: '47f84f4d-ab54-4743-8250-875b54c8bab9', passwordVariable: 'dockerPassword', usernameVariable: 'dockerUsername')]) {
-        sh "ansible-playbook DeployDocker.yml  -vvvv --extra-vars 'HOST=${host} USERNAME=${env.dockerUsername} PASSWORD=${env.dockerPassword}'"
+        //sh "ansible-playbook DeployDocker.yml  -vvvv --extra-vars 'HOST=${host} USERNAME=${env.dockerUsername} PASSWORD=${env.dockerPassword}'"
+        sht "ansible -m ping all-e 'ansible_user=devopsinfra ansible_ssh_pass=Applestore12\$6 ansible_sudo_pass=Applestore12\$6'
     }
 }
